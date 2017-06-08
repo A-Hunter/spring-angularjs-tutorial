@@ -5,8 +5,8 @@ import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import spring.mvc.tuto.Car;
-import spring.mvc.tuto.Engine;
+import spring.mvc.tuto.trash.Car;
+import spring.mvc.tuto.trash.Engine;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;

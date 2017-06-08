@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by Ghazi Naceur on 08/06/2017.
  */
 @Controller
-public class TestController {
+public class BlogEntryController {
     @RequestMapping("/test")
     public String test(){
         return "static/index.html";

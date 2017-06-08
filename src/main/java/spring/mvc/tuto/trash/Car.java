@@ -1,4 +1,4 @@
-package spring.mvc.tuto;
+package spring.mvc.tuto.trash;
 
 /**
  * Created by Ghazi Naceur on 08/06/2017.
