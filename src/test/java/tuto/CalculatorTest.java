@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import spring.mvc.tuto.trash.Calculator;
+import spring.mvc.trash.Calculator;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
