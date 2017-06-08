@@ -1,14 +1,19 @@
 package spring.mvc.tuto;
 
+import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+
 import org.mockito.MockitoAnnotations;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import spring.mvc.tuto.controllers.BlogEntryController;
 
@@ -33,6 +38,9 @@ public class BlogEntryControllerTest {
 //        mockMvc.perform(get("/test")).andDo(print());
         mockMvc.perform(post("/test")
                 .content("{\"title\":\"The Spring MVC tutorial !!!!!\"}")
-                .contentType(MediaType.APPLICATION_JSON)).andDo(print());
+                .contentType(MediaType.APPLICATION_JSON)
+        )
+                .andExpect(jsonPath("$.title", is("The Spring MVC tutorial !!!!!")))
+                .andDo(print());
     }
 }
