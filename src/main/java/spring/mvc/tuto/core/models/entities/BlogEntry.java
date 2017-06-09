@@ -1,10 +1,17 @@
 package spring.mvc.tuto.core.models.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * Created by Ghazi Naceur on 08/06/2017.
  */
+@Entity
 public class BlogEntry {
 
+    @Id
+    @GeneratedValue
     private Long id;
 
     private String title;
