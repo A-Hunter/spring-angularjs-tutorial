@@ -14,7 +14,6 @@ public class Blog {
 
     private String title;
 
-    @ManyToOne(cascade = CascadeType.ALL)
     private Account owner;
 
     public Long getId() {
