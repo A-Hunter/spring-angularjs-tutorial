@@ -1,0 +1,34 @@
+package spring.mvc.tuto.core.models.entities;
+
+/**
+ * Created by Ghazi Naceur on 09/06/2017.
+ */
+public class Account {
+    private Long id;
+    private String name;
+    private String password;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+}

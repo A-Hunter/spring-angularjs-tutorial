@@ -1,13 +1,14 @@
-package spring.mvc.tuto.entities;
+package spring.mvc.tuto.core.models.entities;
 
 /**
- * Created by Ghazi Naceur on 08/06/2017.
+ * Created by Ghazi Naceur on 09/06/2017.
  */
-public class BlogEntry {
-
+public class Blog {
     private Long id;
 
     private String title;
+
+    private Account owner;
 
     public Long getId() {
         return id;
@@ -23,5 +24,13 @@ public class BlogEntry {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public Account getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Account owner) {
+        this.owner = owner;
     }
 }
