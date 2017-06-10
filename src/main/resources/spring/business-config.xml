@@ -33,7 +33,7 @@
                 <entry key="hibernate.show_sql" value="true"/>
             </map>
         </property>
-        <property name="packagesToScan" value="spring.mvc.tuto.core.models.entities"/>
+        <property name="packagesToScan" value="tutorial.core.models.entities"/>
     </bean>
 
     <tx:annotation-driven/>

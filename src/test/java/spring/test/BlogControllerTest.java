@@ -2,20 +2,21 @@ package spring.test;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.ArgumentCaptor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import spring.mvc.tuto.core.models.entities.Account;
-import spring.mvc.tuto.core.models.entities.Blog;
-import spring.mvc.tuto.core.models.entities.BlogEntry;
-import spring.mvc.tuto.core.services.BlogService;
-import spring.mvc.tuto.core.services.exceptions.BlogNotFoundException;
-import spring.mvc.tuto.core.services.util.BlogEntryList;
-import spring.mvc.tuto.core.services.util.BlogList;
-import spring.mvc.tuto.rest.mvc.BlogController;
+import tutorial.core.models.entities.Account;
+import tutorial.core.services.util.BlogEntryList;
+import tutorial.core.models.entities.Blog;
+import tutorial.core.models.entities.BlogEntry;
+import tutorial.core.services.BlogService;
+import tutorial.core.services.exceptions.BlogNotFoundException;
+import tutorial.core.services.util.BlogList;
+import tutorial.rest.mvc.BlogController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +33,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /**
- * Created by Ghazi Naceur on 09/06/2017.
+ * Created by Chris on 6/28/14.
  */
 public class BlogControllerTest {
     @InjectMocks

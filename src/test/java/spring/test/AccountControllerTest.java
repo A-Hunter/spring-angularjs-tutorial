@@ -9,13 +9,13 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import spring.mvc.tuto.core.models.entities.Account;
-import spring.mvc.tuto.core.models.entities.Blog;
-import spring.mvc.tuto.core.services.AccountService;
-import spring.mvc.tuto.core.services.exceptions.AccountDoesNotExistException;
-import spring.mvc.tuto.core.services.exceptions.AccountExistsException;
-import spring.mvc.tuto.core.services.exceptions.BlogExistsException;
-import spring.mvc.tuto.rest.mvc.AccountController;
+import tutorial.core.models.entities.Account;
+import tutorial.core.models.entities.Blog;
+import tutorial.core.services.AccountService;
+import tutorial.core.services.exceptions.AccountDoesNotExistException;
+import tutorial.core.services.exceptions.AccountExistsException;
+import tutorial.core.services.exceptions.BlogExistsException;
+import tutorial.rest.mvc.AccountController;
 
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertEquals;
@@ -31,7 +31,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /**
- * Created by Ghazi Naceur on 09/06/2017.
+ * Created by Chris on 6/28/14.
  */
 public class AccountControllerTest {
     @InjectMocks

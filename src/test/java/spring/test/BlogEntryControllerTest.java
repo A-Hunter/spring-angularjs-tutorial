@@ -8,10 +8,10 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import spring.mvc.tuto.core.models.entities.Blog;
-import spring.mvc.tuto.core.models.entities.BlogEntry;
-import spring.mvc.tuto.core.services.BlogEntryService;
-import spring.mvc.tuto.rest.mvc.BlogEntryController;
+import tutorial.core.models.entities.Blog;
+import tutorial.core.models.entities.BlogEntry;
+import tutorial.core.services.BlogEntryService;
+import tutorial.rest.mvc.BlogEntryController;
 
 import static org.hamcrest.Matchers.*;
 import static org.mockito.Matchers.any;
@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 /**
- * Created by Ghazi Naceur on 08/06/2017.
+ * Created by Chris on 6/19/14.
  */
 public class BlogEntryControllerTest {
     @InjectMocks
