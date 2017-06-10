@@ -1,20 +1,19 @@
-package spring.mvc.tuto.core.repositories;
+package tutorial.core.repositories;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 import tutorial.core.models.entities.Account;
-import tutorial.core.repositories.AccountRepo;
+
+import static org.junit.Assert.assertNotNull;
 
 /**
  * Created by Ghazi Naceur on 09/06/2017.
- */
-
-/**
- * @RunWith(SpringJUnit4ClassRunner.class) used as a container for @Repository beans which will be injected
- * in this environment.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring/business-config.xml")
@@ -28,5 +27,23 @@ public class AccountRepoTest {
     @Test
     public void test(){
 
+    }
+
+    @Before
+    @Transactional
+    @Rollback(false)
+    public void setup()
+    {
+        account = new Account();
+        account.setName("name");
+        account.setPassword("password");
+        repo.createAccount(account);
+    }
+
+    @Test
+    @Transactional
+    public void testFind()
+    {
+        assertNotNull(repo.findAccount(account.getId()));
     }
 }
