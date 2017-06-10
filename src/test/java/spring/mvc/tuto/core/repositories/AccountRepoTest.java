@@ -1,4 +1,4 @@
-package tutorial.core.repositories;
+package spring.mvc.tuto.core.repositories;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 import tutorial.core.models.entities.Account;
+import tutorial.core.repositories.AccountRepo;
 
 import static org.junit.Assert.assertNotNull;
 
